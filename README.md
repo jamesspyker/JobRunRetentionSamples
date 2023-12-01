@@ -17,7 +17,7 @@ These scripts rely on the utility jq for parsing JSON output from cpdctl
 
 https://jqlang.github.io/jq/manual/
 
-# Configure cpdctl to work with the environment you want to stress.
+# Configure cpdctl to work with your cluster.
 
 For example, to work with CPDaaS:
 
