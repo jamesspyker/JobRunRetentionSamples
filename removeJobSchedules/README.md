@@ -30,7 +30,7 @@ cpdctl config profile use cpdaas
 
 for an onprem install need to provide the URL of your installation along with the username and password of the user to perform the actions
 
-cpdctl config profile set myonprem --url https://yourinstallation.com --user {user_name} --password {password}
+cpdctl config profile set myonprem --url https://yourinstallation.com --username {user_name} --password {password}
 
 cpdctl config profile use myonprem
 
