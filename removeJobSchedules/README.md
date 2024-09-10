@@ -1,5 +1,5 @@
 # Cleaning up job schedules
-This can be used for both aaS and on prem installations of CPD. This example will remove the schedule in all jobs in the specified project
+This can be used for both aaS and on prem installations of CPD. This example will remove the schedule in all jobs in the specified projects.
 
 # Working with Projects
 
