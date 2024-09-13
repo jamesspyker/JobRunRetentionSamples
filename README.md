@@ -25,12 +25,12 @@ cpdctl config profile set cpdaas --url https://cloud.ibm.com --apikey {your API 
 
 cpdctl config profile use cpdaas
 
-[Note: cpdaas is just the profile name, you could name it anything else you want.  You can have many of these profiles configured and can just switch to the one you want using 'cpdctl config profile use ']
+Note: cpdaas is just the profile name, you could name it anything else you want.  You can have many of these profiles configured and can just switch to the one you want using 'cpdctl config profile use '
 
 
 for an onprem install need to provide the URL of your installation along with the username and password of the user to perform the actions
 
-cpdctl config profile set myonprem --url https://yourinstallation.com --user {user_name} --password {password}
+cpdctl config profile set myonprem --url https://yourinstallation.com --username {user_name} --password {password}
 
 cpdctl config profile use myonprem
 
