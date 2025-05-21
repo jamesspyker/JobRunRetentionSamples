@@ -9,7 +9,7 @@ fi
 echo "Deleting runs for all jobs in space:" $1
 
 #Retrieve the GUID of the space
-SPACE_ID=`cpdctl space list --name $1 --output json -j "(resources[].metadata.id)[0]" --raw-output`
+SPACE_ID=`cpdctl space list --name "$1" --output json -j "(resources[].metadata.id)[0]" --raw-output`
 #echo "SPACE_ID:" $SPACE_ID
 
 # Maximum chunk size allowed is 100 (this indicates the number of jobs that will be returned for each call to cpdctl)
@@ -21,7 +21,7 @@ BOOKMARK=`jq '.next' <tmpAllJobs.json`
 # parse the output json to identify each Job
 jq -c '.results[].metadata.name' <tmpAllJobs.json | while read i; do
     NAME=`echo $i | tr -d '"'`
-    ./deleteAllJobRunsForAJobInSpace.sh $1 "${NAME}"
+    ./deleteAllJobRunsForAJobInSpace.sh "$1" "${NAME}"
 done
 
 #loop through remaining chunks
@@ -32,7 +32,7 @@ do
     # parse the output json to identify each Job
     jq -c '.results[].metadata.name' <tmpAllJobs.json | while read i; do
         NAME=`echo $i | tr -d '"'`
-        ./deleteAllJobRunsForAJobInSpace.sh $1 "${NAME}"
+        ./deleteAllJobRunsForAJobInSpace.sh "$1" "${NAME}"
     done
 done
 

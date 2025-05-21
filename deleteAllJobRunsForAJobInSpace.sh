@@ -12,7 +12,7 @@ echo "Deleting Job Runs for Job:" $2
 CHUNK_SIZE=100
 
 # Retrieve the GUID of the Container
-SPACE_ID=`cpdctl space list --name $1 --output json -j "(resources[].metadata.id)[0]" --raw-output`
+SPACE_ID=`cpdctl space list --name "$1" --output json -j "(resources[].metadata.id)[0]" --raw-output`
 #echo "Space_ID:" $SPACE_ID
 
 #Retrieve the GUID of the Job

@@ -12,7 +12,7 @@ echo "Deleting Job Runs for Job:" $2
 CHUNK_SIZE=100
 
 # Retrieve the GUID of the Project
-PROJECT_ID=`cpdctl project list --name $1 --output json -j "(resources[].metadata.guid)[0]" --raw-output`
+PROJECT_ID=`cpdctl project list --name "$1" --output json -j "(resources[].metadata.guid)[0]" --raw-output`
 #echo "PROJECT_ID:" $PROJECT_ID
 
 #Retrieve the GUID of the Job

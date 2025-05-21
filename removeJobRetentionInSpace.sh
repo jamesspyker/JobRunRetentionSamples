@@ -5,7 +5,7 @@ if [ $# != 2 ] ; then
     exit 1;
 fi
 
-SPACE_ID=`cpdctl space list  --name $1 --output json -j "(resources[].metadata.id)[0]" --raw-output`
+SPACE_ID=`cpdctl space list  --name "$1" --output json -j "(resources[].metadata.id)[0]" --raw-output`
 echo "SPACE_ID:" $SPACE_ID
 
 ASSET_ID=`cpdctl asset search --space-id $SPACE_ID --type-name job --query "asset.name:$2" --output json -j "results[0].metadata.asset_id" --raw-output`

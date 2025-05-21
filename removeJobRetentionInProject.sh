@@ -5,7 +5,7 @@ if [ $# != 2 ] ; then
     exit 1;
 fi
 
-PROJECT_ID=`cpdctl project list --name $1 --output json -j "(resources[].metadata.guid)[0]" --raw-output`
+PROJECT_ID=`cpdctl project list --name "$1" --output json -j "(resources[].metadata.guid)[0]" --raw-output`
 #echo "PROJECT_ID:" $PROJECT_ID
 
 ASSET_ID=`cpdctl asset search --project-id $PROJECT_ID --type-name job --query "asset.name:$2" --output json -j "results[0].metadata.asset_id" --raw-output`
