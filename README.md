@@ -77,3 +77,9 @@ removeJobRetentionInSpace.sh space_name job_name
 # Working with projects
 
 There is also a set of scripts (ending in InProjects) that can be used in the same way to manage job runs in Projects
+
+# Projects,spaces and jobs that have spaces in their names
+
+In all of these commands if the project, space or job name includes a space then you need to use double quotes around that name when entering it.  For example:
+
+removeJobRetentionAllJobsInSpace.sh "space_name that_has_a_space_in_it"
